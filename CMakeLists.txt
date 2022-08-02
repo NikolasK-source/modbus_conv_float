@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.13.4 FATAL_ERROR)
 # ======================================================================================================================
 
 # project
-project(modbus_conv_float LANGUAGES CXX VERSION 1.0.0)
+project(modbus_conv_float LANGUAGES CXX VERSION 1.0.1)
 
 # settings
 set(Target "modbus_conv_float")   # Executable name (without file extension!)
@@ -57,6 +57,7 @@ set_target_properties(${Target} PROPERTIES
 
 # project version
 target_compile_definitions(${Target} PUBLIC "PROJECT_VERSION=\"${CMAKE_PROJECT_VERSION}\"")
+target_compile_definitions(${Target} PUBLIC "PROJECT_NAME=\"${CMAKE_PROJECT_NAME}\"")
 
 # options that are valid for gcc and clang
 function(commonopts)
