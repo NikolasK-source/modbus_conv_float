@@ -1,0 +1,23 @@
+id: network.koesling.modbus-conv-float
+runtime: org.freedesktop.Platform
+runtime-version: '21.08'
+sdk: org.freedesktop.Sdk
+command: modbus_conv_float
+modules:
+  - name: modbus_conv_float
+    buildsystem: simple
+    build-commands:
+    # build
+    - mkdir build
+    - cmake -B build . -DCMAKE_BUILD_TYPE=Release -DCLANG_FORMAT=OFF -DCOMPILER_WARNINGS=OFF
+    - cmake --build build
+
+    # install
+    - mkdir -p "${FLATPAK_DEST}/bin"
+    - cp build/modbus_conv_float ${FLATPAK_DEST}/bin
+    - ls -lah ${FLATPAK_DEST}
+    sources:
+      - type: git
+        branch: release
+        url: https://github.com/NikolasK-source/modbus_conv_float.git
+
