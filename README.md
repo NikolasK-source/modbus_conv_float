@@ -1,5 +1,8 @@
 # Modbus conv float
 
+**Using this tool is deprecated!**
+Handling floating point values is now a feature of stdin_to_modbus_shm. Therefore, this tool is no longer required.
+
 This application converts floating point numbers to use them with stdin_to_modbus_shm
 
 ## Build
