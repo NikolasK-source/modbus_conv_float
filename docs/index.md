@@ -1,5 +1,9 @@
 # STDIN to Modbus SHM float converter
 
+> **_NOTE:_** Using this tool is deprecated!
+Handling floating point values is now a feature of stdin_to_modbus_shm. 
+Therefore, this tool is no longer required.
+
 This application can be used together with
 [stdin-to-modbus-shm](https://nikolask-source.github.io/stdin_to_modbus_shm/)
 to write float values into the shared memory of a shared memory modbus client (
